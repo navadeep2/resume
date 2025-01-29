@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thati Navadeep - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: #2563eb;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .contact-info a {
+            color: #4b5563;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a:hover {
+            color: #2563eb;
+        }
+
+        .main-content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: #1e293b;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2563eb;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-item h3 {
+            color: #334155;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-item p {
+            color: #64748b;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .project-card h3 {
+            color: #334155;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .certifications-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .certification-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4b5563;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Thati Navadeep</h1>
+            <p>Aspiring B.Tech student passionate about web development, databases, and data science</p>
+        </header>
+
+        <div class="contact-info">
+            <a href="mailto:navadeep500@gmail.com">📧 navadeep500@gmail.com</a>
+            <a href="https://www.linkedin.com/in/thati-navadeep" target="_blank">💼 LinkedIn Profile</a>
+            <a href="https://github.com/navadeep2/" target="_blank">💻 GitHub Profile</a>
+        </div>
+
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Database Management</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3>Sreyas Institute of Engineering & Technology</h3>
+                    <p>Bachelor of Technology (B.Tech) in Computer Programming</p>
+                    <p>2022 - 2026</p>
+                </div>
+                <div class="education-item">
+                    <h3>Sri Chaitanya College of Education</h3>
+                    <p>Intermediate (MPC)</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Speed Typing Test Application</h3>
+                        <p>Developed using Python and Tkinter. Measures typing speed and accuracy with real-time results.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Personal Finance Management System</h3>
+                        <p>Built using PHP and MySQL to track budgets, expenses, and financial data over different time frames.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Library Management System</h3>
+                        <p>Created with Java Applet for managing book records and transactions efficiently.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Health Care Appointment System</h3>
+                        <p>PHP and MySQL-based system for scheduling and managing patient appointments securely.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-list">
+                    <div class="certification-item">🏅 Introduction to MongoDB</div>
+                    <div class="certification-item">🏅 Introduction to Machine Learning</div>
+                    <div class="certification-item">🏅 Python (Basic)</div>
+                    <div class="certification-item">🏅 Python for Data Science</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
