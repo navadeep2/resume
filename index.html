@@ -3,234 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thati Navadeep - Software Engineer Portfolio. Full-stack developer with experience in Python, JavaScript, React, Node.js, and AI voice integrations.">
-    <title>Thati Navadeep | Software Engineer Portfolio</title>
-    <!-- Google Fonts: Syne for creative accent titles, Plus Jakarta Sans for UI elements & body -->
+    <meta name="description" content="Thati Navadeep - Software Engineer Portfolio. Interactive developer console interface showcasing full-stack skills.">
+    <title>Thati Navadeep | Console Terminal Portfolio</title>
+    <!-- Google Fonts: Space Grotesk for tech headings, Plus Jakarta Sans for UI elements & body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Breeze-like floating ambient elements in background -->
+    <!-- Ambient fluid dynamic glowing background gradients -->
     <div class="breeze-orb breeze-orb-1"></div>
     <div class="breeze-orb breeze-orb-2"></div>
+    <div class="breeze-orb breeze-orb-3"></div>
 
-    <!-- ponytail: Responsive asymmetric split-screen layout designed for high-impact recruiting reviews -->
-    <div class="portfolio-wrapper">
+    <!-- Tech Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <div class="app-container">
         
-        <!-- Left Pane: Sticky Profile & Primary CTA -->
-        <aside class="profile-pane">
-            <div class="avatar-ring">
-                <div class="avatar-core">TN</div>
+        <!-- Header Status Bar -->
+        <header class="console-header">
+            <div class="header-left">
+                <span class="control-dot dot-close"></span>
+                <span class="control-dot dot-minimize"></span>
+                <span class="control-dot dot-expand"></span>
+                <span class="console-title">navadeep@engine:~/portfolio</span>
             </div>
+            <div class="header-right">
+                <span class="sys-badge">STATUS: ONLINE</span>
+                <span class="sys-badge">ROLE: FULL_STACK_DEV</span>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Workspace -->
+        <div class="workspace">
             
-            <h1 class="title">Thati Navadeep</h1>
-            <p class="subtitle">Software Engineer | Full-Stack & AI Integration</p>
-            
-            <div class="status-badge">
-                <span class="status-indicator"></span>
-                <span>SDE @ CloudeonTech (Open to Relocation / Remote)</span>
-            </div>
+            <!-- Left Panel: Sidebar / Identity Panel -->
+            <aside class="sidebar-pane">
+                <div class="profile-card">
+                    <div class="avatar-ring">
+                        <div class="avatar-core">TN</div>
+                    </div>
+                    <h1 class="dev-name">Thati Navadeep</h1>
+                    <p class="dev-role">Software Engineer</p>
+                    
+                    <div class="status-indicator-wrapper">
+                        <span class="status-dot"></span>
+                        <span class="status-label">Active & Available for Roles (2026)</span>
+                    </div>
 
-            <div class="quick-ctas">
-                <a href="resume.pdf" class="btn btn-primary" target="_blank">Download Resume (PDF)</a>
-                <a href="mailto:navadeep.dev12@gmail.com" class="btn btn-secondary">Get in Touch</a>
-            </div>
+                    <div class="sidebar-meta">
+                        <p class="meta-item"><span>📍 Location:</span> Hyderabad, India</p>
+                        <p class="meta-item"><span>📧 Email:</span> <a href="mailto:navadeep.dev12@gmail.com">navadeep.dev12@gmail.com</a></p>
+                        <p class="meta-item"><span>📞 Phone:</span> +91 7093470686</p>
+                    </div>
 
-            <div class="contact-meta">
-                <p>📍 Hyderabad, India (Open to Relocation / Bangalore)</p>
-                <p>📞 +91 7093470686</p>
-            </div>
+                    <div class="action-buttons">
+                        <a href="resume.pdf" class="btn btn-primary" target="_blank">Download Resume (PDF)</a>
+                        <a href="mailto:navadeep.dev12@gmail.com" class="btn btn-secondary">Direct Pitch</a>
+                    </div>
 
-            <div class="social-links">
-                <a href="https://github.com/navadeep2/" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/thati-navadeep/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-        </aside>
-
-        <!-- Right Pane: Scrollable Portfolio & Interactive View Toggle -->
-        <main class="content-pane">
-            
-            <!-- Bio Section -->
-            <section class="about">
-                <h2 class="section-title">Professional Summary</h2>
-                <p class="lead-text">
-                    I am a Software Engineer experienced in building full-stack and AI-powered applications using <strong>Python</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, and <strong>Node.js</strong>. I specialize in designing REST APIs, secure authentication systems, and real-time communication tools, combining clean backend logic with responsive frontends.
-                </p>
-            </section>
-
-            <!-- Mode Selector / Toggles to simplify recruiter screening -->
-            <section class="view-selection">
-                <div class="toggle-container">
-                    <button class="toggle-btn active" onclick="switchView('projects')">💼 Experience & Projects</button>
-                    <button class="toggle-btn" onclick="switchView('recruiter')">🔍 Recruiter Cheat Sheet</button>
+                    <div class="sidebar-links">
+                        <a href="https://github.com/navadeep2/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/thati-navadeep/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
                 </div>
-            </section>
+            </aside>
 
-            <!-- VIEW 1: PROJECTS & EXPERIENCE GRID (Active by default) -->
-            <div id="projects-view" class="view-panel active">
+            <!-- Right Panel: IDE Tabbed Editor Layout -->
+            <main class="editor-pane">
                 
-                <!-- Professional Experience -->
-                <section class="experience-section">
-                    <h3 class="subsection-title">Professional Experience</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-header">
-                                <div>
-                                    <h4 class="timeline-title">Software Development Engineer (SDE)</h4>
-                                    <span class="timeline-company">CloudeonTech</span>
-                                </div>
-                                <span class="timeline-date">Apr 2026 - Present</span>
+                <!-- Editor Tabs -->
+                <div class="editor-tabs">
+                    <button class="tab-btn active" onclick="selectTab(event, 'bio-tab')">
+                        <span class="tab-icon font-js">JS</span> bio.js
+                    </button>
+                    <button class="tab-btn" onclick="selectTab(event, 'experience-tab')">
+                        <span class="tab-icon font-json">{}</span> experience.json
+                    </button>
+                    <button class="tab-btn" onclick="selectTab(event, 'projects-tab')">
+                        <span class="tab-icon font-md">MD</span> featured_projects.md
+                    </button>
+                    <button class="tab-btn" onclick="selectTab(event, 'skills-tab')">
+                        <span class="tab-icon font-css">#</span> skills.css
+                    </button>
+                </div>
+
+                <!-- Editor Window Content -->
+                <div class="editor-window">
+                    
+                    <!-- TAB 1: BIO.JS -->
+                    <div id="bio-tab" class="tab-content active">
+                        <div class="code-wrapper">
+                            <span class="code-comment">// Who I am and my engineering philosophy</span>
+                            <span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+                                <span class="code-prop">name</span>: <span class="code-string">"Thati Navadeep"</span>,
+                                <span class="code-prop">location</span>: <span class="code-string">"Hyderabad, India"</span>,
+                                <span class="code-prop">academicStanding</span>: <span class="code-string">"B.Tech CSE (2022-2026), CGPA 8.9"</span>,
+                                <span class="code-prop">philosophy</span>: <span class="code-string">"Writing code that doesn't just work, but stays clear and scales."</span>
+                            };
+
+                            <div class="editorial-block" style="margin-top: 2rem;">
+                                <h3 class="editor-subheading">A Human Summary</h3>
+                                <p class="editor-paragraph">
+                                    I am a Software Engineer experienced in building full-stack and AI-powered applications. I spent my B.Tech studies developing and troubleshooting backends, managing database architectures, and creating responsive web environments. I am passionate about voice automation, clean data models, and high-performance server logic.
+                                </p>
                             </div>
-                            <ul class="timeline-desc">
-                                <li>Developing web applications and backend features using modern JavaScript and Python technologies.</li>
-                                <li>Working on API integrations and frontend optimization across multiple projects.</li>
-                                <li>Collaborating with cross-functional teams using Git-based workflows and clean coding practices.</li>
-                                <li>Built an AI-powered restaurant phone assistant using Twilio, Deepgram STT/TTS, and Cloudflare Tunnel.</li>
-                            </ul>
                         </div>
+                    </div>
 
-                        <div class="timeline-item">
-                            <div class="timeline-header">
-                                <div>
-                                    <h4 class="timeline-title">Software Developer Intern</h4>
-                                    <span class="timeline-company">DIGIT IT</span>
+                    <!-- TAB 2: EXPERIENCE.JSON -->
+                    <div id="experience-tab" class="tab-content">
+                        <div class="code-wrapper">
+                            <span class="code-comment">// Professional Timeline</span>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-role">Software Development Engineer (SDE)</h4>
+                                        <span class="timeline-company">@ CloudeonTech</span>
+                                        <span class="timeline-date">Apr 2026 - Present</span>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Developing web applications and backend features using modern JavaScript and Python.</li>
+                                        <li>Working on API integrations and frontend optimization across multiple projects.</li>
+                                        <li>Built an AI-powered restaurant phone assistant using Twilio, Deepgram STT/TTS, and Cloudflare.</li>
+                                    </ul>
                                 </div>
-                                <span class="timeline-date">Feb 2026 - Apr 2026</span>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-role">Software Developer Intern</h4>
+                                        <span class="timeline-company">@ DIGIT IT</span>
+                                        <span class="timeline-date">Feb 2026 - Apr 2026</span>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Developed responsive web applications using Next.js, TypeScript, and Tailwind CSS.</li>
+                                        <li>Built reusable frontend components while maintaining optimized UI performance.</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <ul class="timeline-desc">
-                                <li>Developed responsive web applications using Next.js, TypeScript, and Tailwind CSS.</li>
-                                <li>Built reusable frontend components while maintaining clean and optimized UI performance.</li>
-                                <li>Collaborated on REST API integrations and frontend feature implementation.</li>
-                            </ul>
                         </div>
                     </div>
-                </section>
 
-                <!-- Featured Projects -->
-                <section class="projects">
-                    <h3 class="subsection-title">Featured Projects</h3>
-                    <div class="projects-grid">
-                        
-                        <div class="project-card">
-                            <div class="project-meta">Python / Twilio / Deepgram</div>
-                            <h3 class="project-name"><a href="https://github.com/navadeep2/PERSONAL-FINANCE-TRACKER" target="_blank">AI Restaurant Phone Assistant</a></h3>
-                            <p class="project-desc">Built a telephony routing system integrating Deepgram STT/TTS models for low-latency voice synthesis and Twilio webhook routing. Secured local webhooks using Cloudflare Tunnels.</p>
+                    <!-- TAB 3: PROJECTS.MD -->
+                    <div id="projects-tab" class="tab-content">
+                        <div class="code-wrapper">
+                            <span class="code-comment"># Portfolio Projects & Repositories</span>
+                            
+                            <div class="projects-grid" style="margin-top: 1.5rem;">
+                                
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <span class="project-index">01</span>
+                                        <span class="project-tech">Python / Twilio / Voice</span>
+                                    </div>
+                                    <h3 class="project-title"><a href="https://github.com/navadeep2/speed-typing-test" target="_blank">AI Restaurant Assistant</a></h3>
+                                    <p class="project-desc">Telephony routing system utilizing Deepgram speech synthesis and Twilio webhook routing. Secured with Cloudflare Tunnels.</p>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <span class="project-index">02</span>
+                                        <span class="project-tech">MERN Stack / WebSockets</span>
+                                    </div>
+                                    <h3 class="project-title"><a href="https://github.com/navadeep2/message-app" target="_blank">Message App (Real-Time)</a></h3>
+                                    <p class="project-desc">A full-stack messaging platform featuring secure JWT user authentication and low-latency communication elements.</p>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <span class="project-index">03</span>
+                                        <span class="project-tech">React Native / Vertex AI</span>
+                                    </div>
+                                    <h3 class="project-title"><a href="https://github.com/navadeep2/Virtual-Try-On" target="_blank">Virtual Try-On Platform</a></h3>
+                                    <p class="project-desc">AI-driven fashion platform integrating generative vision models for realistic clothing overlays. Uses Supabase cloud replication.</p>
+                                </div>
+
+                                <div class="project-card">
+                                    <div class="project-header">
+                                        <span class="project-index">04</span>
+                                        <span class="project-tech">Python / Tkinter</span>
+                                    </div>
+                                    <h3 class="project-title"><a href="https://github.com/navadeep2/speed-typing-test" target="_blank">Speed Typing Test</a></h3>
+                                    <p class="project-desc">Desktop typing metrics suite measuring accuracy and WPM in real-time, built using modular Python UI components.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="other-repos" style="margin-top: 2rem;">
+                                <h4 class="editor-subheading">Other Active Repositories</h4>
+                                <div class="repos-links">
+                                    <a href="https://github.com/navadeep2/learning_task_manager" target="_blank">learning_task_manager</a>
+                                    <a href="https://github.com/navadeep2/health-care-appointment-system" target="_blank">health-care-appointment-system</a>
+                                    <a href="https://github.com/navadeep2/smart_bookmarks" target="_blank">smart_bookmarks</a>
+                                    <a href="https://github.com/navadeep2/personal-finance-mangement" target="_blank">personal-finance-management</a>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="project-card">
-                            <div class="project-meta">MongoDB / React / Node.js</div>
-                            <h3 class="project-name"><a href="https://github.com/navadeep2/message-app" target="_blank">Message App (Real-Time)</a></h3>
-                            <p class="project-desc">A full-stack messaging platform featuring secure JWT user authentication and low-latency communication elements built under Agile sprints.</p>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-meta">React Native / Node.js / Vertex AI</div>
-                            <h3 class="project-name"><a href="https://github.com/navadeep2/Virtual-Try-On" target="_blank">Virtual Try-On Platform</a></h3>
-                            <p class="project-desc">AI-driven fashion platform integrating generative vision models for realistic clothing overlays. Leveraged Supabase cloud state replication to cache histories.</p>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-meta">Python / Tkinter</div>
-                            <h3 class="project-name"><a href="https://github.com/navadeep2/speed-typing-test" target="_blank">Speed Typing Test</a></h3>
-                            <p class="project-desc">Desktop typing metrics suite measuring accuracy and WPM in real-time, built using modular Python UI components.</p>
-                        </div>
-
                     </div>
-                </section>
-            </div>
 
-            <!-- VIEW 2: RECRUITER CHEAT SHEET (Hidden by default) -->
-            <div id="recruiter-view" class="view-panel">
-                <section class="cheat-sheet-section">
-                    <h3 class="subsection-title">Recruiter Overview</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Education:</strong> B.Tech from Sreyas Institute of Engineering and Technology (Nov 2022 - May 2026)</li>
-                        <li><strong>Academic Standing:</strong> CGPA: 8.9 / 10.0</li>
-                        <li><strong>Target Roles:</strong> Python Developer, Fullstack Web Developer, Software Engineer</li>
-                        <li><strong>Architectures & Concepts:</strong> JWT Authentication, RBAC, Context API, React Router, Real-Time Communication</li>
-                    </ul>
+                    <!-- TAB 4: SKILLS.CSS -->
+                    <div id="skills-tab" class="tab-content">
+                        <div class="code-wrapper">
+                            <span class="code-comment">/* Organized Stack Competencies */</span>
+                            
+                            <div class="skills-block">
+                                <h4 class="skills-heading">Languages</h4>
+                                <div class="skills-grid-row">
+                                    <span>Python</span>
+                                    <span>JavaScript (ES6+)</span>
+                                    <span>TypeScript</span>
+                                    <span>Java</span>
+                                    <span>SQL (MySQL)</span>
+                                    <span>PHP</span>
+                                    <span>C</span>
+                                </div>
+                            </div>
 
-                    <h3 class="subsection-title">Other Active Repositories</h3>
-                    <div class="certs-list">
-                        <div class="cert-item"><a href="https://github.com/navadeep2/learning_task_manager" target="_blank">learning_task_manager</a></div>
-                        <div class="cert-item"><a href="https://github.com/navadeep2/health-care-appointment-system" target="_blank">health-care-appointment-system</a></div>
-                        <div class="cert-item"><a href="https://github.com/navadeep2/smart_bookmarks" target="_blank">smart_bookmarks</a></div>
-                        <div class="cert-item"><a href="https://github.com/navadeep2/personal-finance-mangement" target="_blank">personal-finance-management</a></div>
+                            <div class="skills-block" style="margin-top: 2rem;">
+                                <h4 class="skills-heading">Frameworks & Tools</h4>
+                                <div class="skills-grid-row">
+                                    <span>Flask</span>
+                                    <span>React.js</span>
+                                    <span>Next.js</span>
+                                    <span>Node.js</span>
+                                    <span>Express.js</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>React Native</span>
+                                    <span>MongoDB</span>
+                                    <span>MySQL</span>
+                                    <span>Supabase</span>
+                                    <span>Google Cloud Vertex AI</span>
+                                    <span>Cloudflare Tunnel</span>
+                                    <span>AWS (Basics)</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-block" style="margin-top: 2rem;">
+                                <h4 class="skills-heading">AI & Voice Integration</h4>
+                                <div class="skills-grid-row">
+                                    <span>Twilio API</span>
+                                    <span>Deepgram STT/TTS</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </section>
-            </div>
 
-            <!-- Technical Skills Category Block (Always visible) -->
-            <section class="skills">
-                <h2 class="section-title">Technical Skills</h2>
-                
-                <div class="skills-category">
-                    <h4 class="skills-cat-title">Languages</h4>
-                    <div class="skills-grid">
-                        <span>Python</span>
-                        <span>JavaScript (ES6+)</span>
-                        <span>TypeScript</span>
-                        <span>Java</span>
-                        <span>SQL (MySQL)</span>
-                        <span>PHP</span>
-                        <span>C</span>
-                    </div>
                 </div>
+            </main>
 
-                <div class="skills-category" style="margin-top: 1.5rem;">
-                    <h4 class="skills-cat-title">Frameworks & Libraries</h4>
-                    <div class="skills-grid">
-                        <span>Flask</span>
-                        <span>React.js</span>
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>Express.js</span>
-                        <span>Tailwind CSS</span>
-                        <span>React Native</span>
-                    </div>
-                </div>
+        </div>
 
-                <div class="skills-category" style="margin-top: 1.5rem;">
-                    <h4 class="skills-cat-title">Databases & Cloud</h4>
-                    <div class="skills-grid">
-                        <span>MongoDB</span>
-                        <span>MySQL</span>
-                        <span>Supabase</span>
-                        <span>Google Cloud Vertex AI</span>
-                        <span>Cloudflare Tunnel</span>
-                        <span>AWS (Basics)</span>
-                    </div>
-                </div>
-
-                <div class="skills-category" style="margin-top: 1.5rem;">
-                    <h4 class="skills-cat-title">AI & Voice Integration</h4>
-                    <div class="skills-grid">
-                        <span>Twilio API</span>
-                        <span>Deepgram STT/TTS</span>
-                    </div>
-                </div>
-            </section>
-
-        </main>
     </div>
 
-    <!-- ponytail: Native lightweight JavaScript for view toggling and 3D parallax effects -->
+    <!-- ponytail: Native tab switcher and 3D parallax effects -->
     <script>
-        function switchView(viewName) {
-            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.view-panel').forEach(panel => panel.classList.remove('active'));
+        function selectTab(event, tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
             
-            if (viewName === 'projects') {
-                event.target.classList.add('active');
-                document.getElementById('projects-view').classList.add('active');
-            } else {
-                event.target.classList.add('active');
-                document.getElementById('recruiter-view').classList.add('active');
-            }
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
         }
 
+        // Apply interactive 3D tilt effects on project cards
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
@@ -239,8 +278,8 @@
                 const x = e.clientX - (rect.left + w / 2);
                 const y = e.clientY - (rect.top + h / 2);
                 
-                const tiltX = -(y / (h / 2)) * 6; // Lift tilt limit
-                const tiltY = (x / (w / 2)) * 6;
+                const tiltX = -(y / (h / 2)) * 8;
+                const tiltY = (x / (w / 2)) * 8;
                 
                 card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
             });
