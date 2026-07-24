@@ -1,4 +1,4 @@
-/* ponytail: Simple grid-based layout structure with native CSS transitions and variables. No bloated framework assets. */
+/* ponytail: Implement premium 3D perspective tilts and animated ambient bg orbs using pure CSS transitions/transforms. */
 :root {
     --bg-color: #08080c; 
     --editor-bg: #0f1016;
@@ -37,12 +37,6 @@ body {
     padding: 4rem 2rem;
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 1.5rem 1rem;
-    }
-}
-
 /* Grid Overlay background */
 .grid-overlay {
     position: fixed;
@@ -62,10 +56,10 @@ body {
 .breeze-orb {
     position: fixed;
     border-radius: 50%;
-    filter: blur(80px);
+    filter: blur(100px);
     z-index: -3;
     pointer-events: none;
-    opacity: 0.65;
+    opacity: 0.7;
 }
 
 .breeze-orb-1 {
@@ -150,21 +144,11 @@ body {
     font-size: 0.85rem;
     color: var(--text-secondary);
     margin-left: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 180px;
 }
 
 .header-right {
     display: flex;
     gap: 0.75rem;
-}
-
-@media (max-width: 500px) {
-    .header-right {
-        display: none; /* Hide system status badges on very narrow viewports */
-    }
 }
 
 .sys-badge {
@@ -186,10 +170,9 @@ body {
     min-height: 600px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
     .workspace {
         grid-template-columns: 1fr;
-        min-height: auto;
     }
 }
 
@@ -200,24 +183,9 @@ body {
     padding: 2.5rem 1.75rem;
 }
 
-@media (max-width: 850px) {
-    .sidebar-pane {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 2rem 1.5rem;
-    }
-}
-
 .profile-card {
     display: flex;
     flex-direction: column;
-}
-
-@media (max-width: 850px) {
-    .profile-card {
-        align-items: center;
-        text-align: center;
-    }
 }
 
 .avatar-ring {
@@ -279,8 +247,6 @@ body {
 
 .sidebar-meta {
     margin-bottom: 2rem;
-    width: 100%;
-    text-align: left;
 }
 
 .meta-item {
@@ -307,13 +273,6 @@ body {
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 2rem;
-    width: 100%;
-}
-
-@media (max-width: 850px) {
-    .action-buttons {
-        max-width: 320px;
-    }
 }
 
 .btn {
@@ -353,7 +312,7 @@ body {
 
 .sidebar-links {
     display: flex;
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
 .sidebar-links a {
@@ -374,7 +333,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--editor-bg);
-    overflow: hidden;
 }
 
 .editor-tabs {
@@ -382,27 +340,17 @@ body {
     background-color: #0b0c10;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-}
-
-.editor-tabs::-webkit-scrollbar {
-    height: 3px;
-}
-
-.editor-tabs::-webkit-scrollbar-thumb {
-    background-color: rgba(255,255,255,0.1);
 }
 
 .tab-btn {
     border: none;
     background: transparent;
     color: var(--text-secondary);
-    padding: 0.85rem 1.25rem;
+    padding: 0.85rem 1.5rem;
     font-family: var(--font-code);
     font-size: 0.8rem;
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
     border-right: 1px solid rgba(255, 255, 255, 0.06);
@@ -434,13 +382,6 @@ body {
 .editor-window {
     padding: 2.5rem;
     flex-grow: 1;
-    overflow-x: hidden;
-}
-
-@media (max-width: 600px) {
-    .editor-window {
-        padding: 1.5rem 1rem;
-    }
 }
 
 .tab-content {
@@ -457,14 +398,6 @@ body {
     font-family: var(--font-code);
     font-size: 0.95rem;
     line-height: 1.7;
-    white-space: pre-wrap; /* Wrap long lines to prevent overflow on mobile */
-    word-break: break-word;
-}
-
-@media (max-width: 600px) {
-    .code-wrapper {
-        font-size: 0.85rem;
-    }
 }
 
 .code-comment { color: #5c6370; display: block; margin-bottom: 0.5rem; }
@@ -500,12 +433,6 @@ body {
     margin-top: 1.5rem;
 }
 
-@media (max-width: 600px) {
-    .timeline {
-        padding-left: 1rem;
-    }
-}
-
 .timeline-item {
     position: relative;
     margin-bottom: 2.5rem;
@@ -520,12 +447,6 @@ body {
     border-radius: 50%;
     background-color: var(--accent);
     border: 2px solid var(--editor-bg);
-}
-
-@media (max-width: 600px) {
-    .timeline-dot {
-        left: calc(-1rem - 6px);
-    }
 }
 
 .timeline-header {
@@ -580,10 +501,9 @@ body {
     font-family: var(--font-body);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 }
 
@@ -599,10 +519,9 @@ body {
     transform-style: preserve-3d;
 }
 
-@media (max-width: 600px) {
-    .project-card {
-        padding: 1.25rem;
-    }
+.project-card:hover {
+    border-color: var(--card-border-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(180, 138, 83, 0.05);
 }
 
 .project-header {
@@ -703,76 +622,6 @@ body {
 .skills-grid-row span:hover {
     border-color: var(--accent);
     color: var(--text-primary);
-}
-
-/* Recruiter View Style */
-.cheat-sheet-section {
-    background-color: rgba(255,255,255,0.01);
-    border: 1px solid var(--card-border);
-    padding: 2rem 1.5rem;
-    border-radius: 8px;
-}
-
-.subsection-title {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    margin-bottom: 1.25rem;
-    color: var(--text-primary);
-}
-
-.cheat-sheet-section .subsection-title:not(:first-child) {
-    margin-top: 2.5rem;
-}
-
-.highlights-list {
-    list-style: none;
-}
-
-.highlights-list li {
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.highlights-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
-}
-
-.certs-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-@media (max-width: 600px) {
-    .certs-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-.cert-item {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    background-color: rgba(255,255,255,0.02);
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    border: 1px solid var(--card-border);
-}
-
-.cert-item a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.cert-item a:hover {
-    color: var(--accent);
 }
 
 /* Animations */
