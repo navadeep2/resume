@@ -250,18 +250,24 @@ body {
 }
 
 .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 0.85rem;
     color: var(--text-secondary);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.85rem;
+    text-align: left;
 }
 
-.meta-item span {
-    color: var(--text-primary);
+.meta-icon {
+    flex-shrink: 0;
+    color: var(--accent);
 }
 
 .meta-item a {
     color: var(--text-secondary);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .meta-item a:hover {
@@ -633,4 +639,173 @@ body {
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive Overrides - Isolated to not disturb desktop layout */
+@media (max-width: 850px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+
+    .portfolio-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem 0.5rem;
+    }
+
+    .app-container {
+        width: 100%;
+        min-width: 0; /* Reclaims horizontal scaling */
+    }
+    
+    .console-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .console-title {
+        max-width: 165px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .header-right {
+        display: none; /* Hide badges to save space */
+    }
+    
+    .workspace {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        min-width: 0; /* Reclaims horizontal scaling */
+    }
+    
+    .sidebar-pane {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-card {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .sidebar-meta {
+        text-align: left;
+        width: 100%;
+        max-width: 290px;
+    }
+    
+    .action-buttons {
+        max-width: 290px;
+        width: 100%;
+    }
+    
+    .editor-pane {
+        min-width: 0; /* Reclaims horizontal scaling */
+    }
+
+    .editor-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tab-btn {
+        flex: 0 0 auto;
+        padding: 0.8rem 1.25rem;
+    }
+    
+    .editor-window {
+        padding: 1.5rem 1rem;
+    }
+    
+    .code-wrapper {
+        font-size: 0.85rem;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .timeline {
+        padding-left: 1rem;
+    }
+    
+    .timeline-dot {
+        left: calc(-1rem - 6px);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .project-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Extra support for smaller mobile viewports (425px and below) */
+@media (max-width: 425px) {
+    body {
+        padding: 0.5rem 0.25rem; /* Reclaim maximum screen space */
+    }
+
+    .portfolio-wrapper {
+        padding: 0.25rem 0;
+    }
+
+    .app-container {
+        border-radius: 8px;
+    }
+
+    .sidebar-pane {
+        padding: 2rem 0.75rem;
+    }
+
+    .dev-name {
+        font-size: 1.45rem;
+    }
+
+    .editor-window {
+        padding: 1rem 0.5rem;
+    }
+
+    .code-wrapper {
+        font-size: 0.8rem;
+    }
+
+    .tab-btn {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .projects-grid {
+        gap: 0.75rem;
+    }
+
+    .project-card {
+        padding: 1rem 0.75rem;
+    }
+
+    .timeline {
+        padding-left: 0.75rem;
+    }
+
+    .timeline-dot {
+        left: calc(-0.75rem - 6px);
+    }
+
+    .timeline-header {
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+        font-size: 0.95rem;
+    }
 }
